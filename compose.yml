@@ -14,7 +14,6 @@ services:
     depends_on:
       - php
 
-
   mysql:
     image: mysql:9.0.1
     container_name: middleware-mysql
@@ -24,8 +23,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
       MYSQL_DATABASE: test
-    ports:
-      - "3306:3306"
+#    ports:
+#      - "3306:3306"
 
   php:
     build: ./docker/php
@@ -34,7 +33,7 @@ services:
     ports:
       - "5173:5173"
     env_file:
-      - .env.example
+      - .env
     environment:
       - DB_HOST=${DB_HOST}
       - DB_PORT=${DB_PORT}

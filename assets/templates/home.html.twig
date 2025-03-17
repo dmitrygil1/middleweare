@@ -1,0 +1,19 @@
+{% extends "html.twig" %}
+
+{% block title %} Главная страница {% endblock %}
+
+{% block body %}
+    <section class="d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%;">
+            <div class="card-body text-center">
+                <h2 class="card-title mb-4">Добро пожаловать!</h2>
+                <a href="/login" class="btn btn-primary w-100 mb-3 py-2 rounded-pill shadow-sm hover-shadow">
+                    Войти
+                </a>
+                <a href="/register" class="btn btn-primary w-100 py-2 rounded-pill shadow-sm hover-shadow">
+                    Зарегистрироваться
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
