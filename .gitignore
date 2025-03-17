@@ -1,0 +1,7 @@
+composer.lock
+/vendor
+
+.env
+/public/build
+/node_modules
+
